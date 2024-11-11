@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+
+    android:id="@+id/MainLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:backgroundTint="#B62828"
+    android:orientation="vertical"
+    tools:context=".MyProfile">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/topDarkFrame"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#242235"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_weight=".5">
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/profileImageView"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginTop="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/logOutButton"
+            app:shapeAppearanceOverlay="@style/roundedImageView"
+            app:srcCompat="@mipmap/ic_mokap"
+            tools:ignore="MissingConstraints" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/logOutButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:background="@drawable/transparent_button"
+            android:fontFamily="@font/open_sans_medium"
+            android:minWidth="0dp"
+            android:minHeight="40dip"
+            android:text="Log out"
+            android:textAllCaps="false"
+            android:textColor="@color/profile_gray"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="@+id/settingsTextView"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/settingsTextView" />
+
+        <TextView
+            android:id="@+id/settingsTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:fontFamily="@font/open_sans_medium"
+            android:text="Settings"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textColor="#FFFFFF"
+            android:textSize="28sp"
+            android:typeface="serif"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/nameTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:fontFamily="@font/open_sans_medium"
+            android:text="Lucile Alvarado"
+            android:textColor="#FFFFFF"
+            android:textSize="19sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/profileImageView" />
+
+        <TextView
+            android:id="@+id/carearTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:fontFamily="@font/open_sans_medium"
+            android:text="Graphic Designer"
+            android:textColor="@color/profile_gray"
+            android:textSize="15sp"
+            app:layout_constraintEnd_toEndOf="@+id/nameTextView"
+            app:layout_constraintStart_toStartOf="@+id/nameTextView"
+            app:layout_constraintTop_toBottomOf="@id/nameTextView" />
+
+        <TextView
+            android:id="@+id/addressTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="45dp"
+            android:fontFamily="@font/open_sans_medium"
+            android:text="Home address"
+            android:textColor="@color/profile_gray"
+            android:textSize="15sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/carearTextView"
+            app:layout_constraintStart_toStartOf="@+id/carearTextView"
+            app:layout_constraintTop_toBottomOf="@id/carearTextView" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/bottomLightFrame"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/topDarkFrame"
+        app:layout_constraintVertical_weight=".5">
+
+
+        <RelativeLayout
+            android:id="@+id/facebookLayout"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_gravity="center"
+            android:layout_marginBottom="52dp"
+            android:background="@drawable/border_social_network"
+            android:padding="5dp"
+            app:layout_constraintBottom_toTopOf="@+id/editProfileButt"
+            app:layout_constraintEnd_toStartOf="@+id/linkedinLayout"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/facebookIcon"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:layout_centerInParent="true"
+                android:layout_gravity="center"
+                app:srcCompat="@drawable/facebook_icon"
+                app:tint="@color/orange" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/linkedinLayout"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_gravity="center"
+            android:background="@drawable/border_social_network"
+            android:padding="5dp"
+            app:layout_constraintBottom_toBottomOf="@+id/facebookLayout"
+            app:layout_constraintEnd_toStartOf="@+id/instagramLayout"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/facebookLayout"
+            app:layout_constraintTop_toTopOf="@+id/facebookLayout"
+            app:layout_constraintVertical_bias="0.502">
+
+            <ImageView
+                android:id="@+id/linkedinIcon"
+                android:layout_width="53dp"
+                android:layout_height="52dp"
+                android:layout_centerInParent="true"
+                android:layout_gravity="center"
+                app:srcCompat="@drawable/in_icon"
+                app:tint="@color/orange" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/instagramLayout"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_gravity="center"
+            android:background="@drawable/border_social_network"
+            android:padding="5dp"
+            app:layout_constraintBottom_toBottomOf="@+id/facebookLayout"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/linkedinLayout"
+            app:layout_constraintTop_toTopOf="@+id/facebookLayout"
+            app:layout_constraintVertical_bias="0.502">
+
+            <ImageView
+                android:id="@+id/instagramIcon"
+                android:layout_width="53dp"
+                android:layout_height="52dp"
+                android:layout_centerInParent="true"
+                android:layout_gravity="center"
+                app:srcCompat="@drawable/instagram_icon"
+                app:tint="@color/orange" />
+
+        </RelativeLayout>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/editProfileButt"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:background="@drawable/transparent_black_button"
+            android:minHeight="42dip"
+            android:text="Edit profile"
+            android:textAllCaps="false"
+            app:layout_constraintBottom_toTopOf="@+id/viewContactsButt"
+            app:layout_constraintEnd_toEndOf="@+id/viewContactsButt"
+            app:layout_constraintStart_toStartOf="@+id/viewContactsButt" />
+
+        <Button
+            android:id="@+id/viewContactsButt"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="8dp"
+            android:backgroundTint="@color/orange"
+            android:letterSpacing="0.15"
+            android:minHeight="62dip"
+            android:text="VIEW MY CONTACTS"
+            android:textSize="16sp"
+            app:cornerRadius="5dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
