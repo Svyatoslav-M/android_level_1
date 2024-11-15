@@ -43,4 +43,12 @@
         libero vel nunc consequat, quis tincidunt nisl eleifend. Cras bibendum enim a justo luctus
         vestibulum. Fusce dictum libero quis erat maximus, vitae volutpat diam dignissim.
     </string>
+    <string name="log_out">Log out</string>
+    <string name="settings">Settings</string>
+    <string name="standart_name">Lucile Alvarado</string>
+    <string name="career">Graphic Designer</string>
+    <string name="home_address">Home address</string>
+    <string name="edit_profile">Edit profile</string>
+    <string name="view_my_contacts">VIEW MY CONTACTS</string>
+    <string name="name">name</string>
 </resources>
