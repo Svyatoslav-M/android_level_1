@@ -14,7 +14,7 @@
         android:id="@+id/topDarkFrame"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="#242235"
+        android:background="@color/dark_blue"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -29,7 +29,7 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/logOutButton"
             app:shapeAppearanceOverlay="@style/roundedImageView"
-            app:srcCompat="@mipmap/ic_mokap"
+            app:srcCompat="@mipmap/my_photo"
             tools:ignore="MissingConstraints" />
 
         <androidx.appcompat.widget.AppCompatButton
@@ -70,7 +70,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="24dp"
             android:fontFamily="@font/open_sans_medium"
-            android:text="@string/standart_name"
+            android:text="@string/name"
             android:textColor="#FFFFFF"
             android:textSize="19sp"
             app:layout_constraintEnd_toEndOf="parent"
